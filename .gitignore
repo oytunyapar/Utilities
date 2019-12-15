@@ -2,4 +2,6 @@
 git_commit_message.txt
 .cproject
 .project
+CMakeCache.txt
+CMakeFiles/
 
