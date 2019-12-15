@@ -16,4 +16,4 @@ message(STATUS ${libgtestmain_location})
 add_library(libgtestmain STATIC IMPORTED)
 set_target_properties(libgtestmain PROPERTIES IMPORTED_LOCATION ${libgtestmain_location})
 
-target_link_libraries(${TEST_BINARY} libgtest libgtestmain ${CMAKE_THREAD_LIBS_INIT}) 
+target_link_libraries(${TEST_BINARY} libgtest libgtestmain ${CMAKE_THREAD_LIBS_INIT})
