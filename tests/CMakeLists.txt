@@ -10,10 +10,10 @@ message(STATUS ${libgtest_location})
 add_library(libgtest STATIC IMPORTED)
 set_target_properties(libgtest PROPERTIES IMPORTED_LOCATION ${libgtest_location})
 
-find_library(libgtestmain_location NAMES libgtest.a)
-message(STATUS ${libgtestmain_location})
+find_library(libgmock_location NAMES libgmock.a)
+message(STATUS ${libgmock_location})
 
-add_library(libgtestmain STATIC IMPORTED)
-set_target_properties(libgtestmain PROPERTIES IMPORTED_LOCATION ${libgtestmain_location})
+add_library(libgmock STATIC IMPORTED)
+set_target_properties(libgmock PROPERTIES IMPORTED_LOCATION ${libgmock_location})
 
-target_link_libraries(${TEST_BINARY} libgtest libgtestmain ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(${TEST_BINARY} libgtest libgmock ${CMAKE_THREAD_LIBS_INIT})
